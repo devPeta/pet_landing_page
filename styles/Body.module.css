@@ -1,0 +1,55 @@
+/* Body.module.css */
+.Section {
+  background-color: #F7F5FD;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  align-items: center;
+}
+
+.h1 {
+  font-size: 80px;
+  font-weight: bold;
+  color: #2D2D2D;
+  margin-bottom: 2rem;
+}
+
+.p {
+  font-size: 18px;
+  color: #2D2D2D;
+  font-weight: normal;
+  margin-bottom: 4rem;
+}
+
+.GetStarted {
+  background-color: #F8D57E;
+  color: #2D2D2D;
+  font-size: 18px;
+  width: 284px;
+  height: 84px;
+  border-radius: 5%;
+  border: none;
+  cursor: pointer;
+}
+
+.img img {
+  max-width: 400px;
+  border-radius: 16px;
+}
+
+.vid {
+  background-color: #F2FAF8;
+  height: 600px;
+  display: flex;
+  padding: 4rem 2rem;
+  align-items: center;
+}
+
+
+.vimg img{
+  width: 765px;
+  height: 480px;
+  border-radius: 16px;
+}
+

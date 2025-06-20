@@ -1,0 +1,50 @@
+/* Navbar.module.css */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2D2D2D;
+}
+
+.actions {
+  display: flex;
+  gap: 2rem;
+}
+
+.SignUp {
+  background-color: white;
+  color: #2D2D2D;
+  font-size: 20px;
+  border: none;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.Login {
+  background-color: #3366FF;
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  height: 54;
+  width: 153px;
+  border-radius: 5%;
+  font-weight: 100;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;   /* Vertically center items */
+  gap: 0.5rem;           /* Space between image and text */
+}
