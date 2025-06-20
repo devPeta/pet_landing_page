@@ -83,3 +83,18 @@
   );
   pointer-events: none; /* Let clicks go through the gradient */
 }
+
+.infoCardStyle {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #fff; /* Optional: background for contrast */
+}
+
+.cardRow {
+  display: flex;
+  justify-content: space-between; /* Space out cards horizontally */
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: nowrap; /* ❗ Force all 4 to stay in one row */
+  overflow-x: auto;  /* Optional: scroll if screen too small */
+}

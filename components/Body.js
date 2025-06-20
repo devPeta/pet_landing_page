@@ -27,22 +27,59 @@ export default function Body() {
               </div>
         </section>
     
-    <section>
-        <div>
-            <InfoCard iconSrc="\dog.svg" title="Best quality pet food" subtitle ={
-    "Super delicious food. <br />Available in a range of  <br />delicious flavors."</>
 
-            <InfoCard iconSrc="\Beco.svg" title="Toys & Accessories" subtitle= ={
-    <></>"Soft toys, chew toys, and  <br />rope toys. Strong,  <br />interactive, and fun."/>
+   <section className={styles.infoCardStyle}>
+  <div className={styles.cardRow}>
+    <InfoCard
+      iconSrc="/dog.svg"
+      title="Best quality pet food"
+      subtitle={
+        <>
+          Super delicious food. <br />
+          Available in a range of <br />
+          delicious flavors.
+        </>
+      }
+    />
 
-            <InfoCard iconSrc="\Accessories icon.svg" title="Pets medical care" subtitle= ={
-    <></>"You can get a wide  <br />range of great  <br />treatments for your dog."/>
+    <InfoCard
+      iconSrc="/Beco.svg"
+      title="Toys & Accessories"
+      subtitle={
+        <>
+          Soft toys, chew toys, and <br />
+          rope toys. Strong, <br />
+          interactive, and fun.
+        </>
+      }
+    />
 
-            <InfoCard iconSrc="\globe.svg" title="Pets medical care" subtitle= ={
-    <></>"It's the right time to  <br />groom your dog with a  <br />variety of treatments.s"/>
-        </div>
-        </section>
-    
+    <InfoCard
+      iconSrc="/Accessories icon.svg"
+      title="Pets medical care"
+      subtitle={
+        <>
+          You can get a wide <br />
+          range of great <br />
+          treatments for your dog.
+        </>
+      }
+    />
 
+    <InfoCard
+      iconSrc="/globe.svg"
+      title="Pets grooming"
+      subtitle={
+        <>
+          It's the right time to <br />
+          groom your dog with a <br />
+          variety of treatments.
+        </>
+      }
+    />
+  </div>
+</section>
+
+    </>
   )
 }
