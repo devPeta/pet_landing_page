@@ -42,14 +42,44 @@
   background-color: #F2FAF8;
   height: 600px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 4rem 2rem;
+}
+
+.vimg {
+  position: relative;
+  width: 100%;               /* ✅ Allow full width */
+  max-width: 765px;          /* ✅ Limit it to 765px max */
+  aspect-ratio: 16 / 10.5;   /* ✅ Maintain image ratio (765 / 480) */
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-
-.vimg img{
-  width: 765px;
-  height: 480px;
+.vimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   border-radius: 16px;
 }
 
+/* ✅ Gradient overlay */
+.vimg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none; /* Let clicks go through the gradient */
+}
