@@ -1,11 +1,16 @@
-/* Body.module.css */
+/* === SECTION === */
 .Section {
   background-color: #F7F5FD;
   height: 600px;
   display: flex;
   justify-content: space-between;
-  padding: 4rem 2rem;
   align-items: center;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
 .h1 {
@@ -13,13 +18,19 @@
   font-weight: bold;
   color: #2D2D2D;
   margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.4s;
 }
 
 .p {
   font-size: 18px;
   color: #2D2D2D;
   font-weight: normal;
-  margin-bottom: 4rem;
+  padding-bottom: 5%;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.6s;
 }
 
 .GetStarted {
@@ -28,16 +39,32 @@
   font-size: 18px;
   width: 284px;
   height: 84px;
-  border-radius: 5%;
+  border-radius: 12px;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.8s;
 }
 
+.GetStarted:hover {
+  background-color: #ffd952;
+  transform: scale(1.05);
+}
+
+/* === IMAGE === */
 .img img {
   max-width: 400px;
   border-radius: 16px;
+  transition: transform 0.4s ease;
 }
 
+.img img:hover {
+  transform: scale(1.03);
+}
+
+/* === VIDEO SECTION === */
 .vid {
   background-color: #F2FAF8;
   height: 600px;
@@ -49,9 +76,9 @@
 
 .vimg {
   position: relative;
-  width: 100%;               /* ✅ Allow full width */
-  max-width: 765px;          /* ✅ Limit it to 765px max */
-  aspect-ratio: 16 / 10.5;   /* ✅ Maintain image ratio (765 / 480) */
+  width: 100%;
+  max-width: 765px;
+  aspect-ratio: 16 / 10.5;
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -65,9 +92,13 @@
   object-fit: cover;
   display: block;
   border-radius: 16px;
+  transition: transform 0.3s ease;
 }
 
-/* ✅ Gradient overlay */
+.vimg img:hover {
+  transform: scale(1.03);
+}
+
 .vimg::after {
   content: '';
   position: absolute;
@@ -81,20 +112,107 @@
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0)
   );
-  pointer-events: none; /* Let clicks go through the gradient */
+  pointer-events: none;
 }
 
+/* === CARD SECTION === */
 .infoCardStyle {
   width: 100%;
   padding: 4rem 2rem;
-  background-color: #fff; /* Optional: background for contrast */
+  background-color: #fff;
 }
 
 .cardRow {
   display: flex;
-  justify-content: space-between; /* Space out cards horizontally */
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: stretch;
   gap: 1.5rem;
-  flex-wrap: nowrap; /* ❗ Force all 4 to stay in one row */
-  overflow-x: auto;  /* Optional: scroll if screen too small */
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
+
+/* === INDIVIDUAL CARDS (from Infocard.module.css) === */
+.InfoCard {
+  flex: 1 1 22%;
+  min-width: 200px;
+  max-width: 22%;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.InfoCard:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.iconSrc {
+  margin-bottom: 1rem;
+}
+
+.h3 {
+  font-size: 18px;
+  color: #2d2d2d;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+}
+
+.p {
+  font-size: 16px;
+  color: #2d2d2d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageRowSection {
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.imageRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;     /* All in a row */
+  gap: 1rem;
+  overflow-x: auto;      /* Enable scroll if screen too small */
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+/* .imageWrapper:hover {
+  transform: scale(1.05);
+} */
+
+
+/* === ANIMATION KEYFRAMES === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

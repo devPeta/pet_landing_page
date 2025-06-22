@@ -1,5 +1,9 @@
 import styles from '../styles/Body.module.css';
 import InfoCard from './InfoCard';
+import ImageRow from './Rowimage';
+import UserComment from './UserComment';
+import Footer from './Footer';
+
 
 export default function Body() {
   return (
@@ -17,7 +21,7 @@ export default function Body() {
           </div>
 
           <div className={styles.img}>
-              <img src="/Image.svg" alt="Illustration" />
+              <img src="/Image.svg" alt="Illustration" height={360} width={475}/>
           </div>
         </section>
 
@@ -27,11 +31,13 @@ export default function Body() {
               </div>
         </section>
     
+    
+    <ImageRow/>
 
    <section className={styles.infoCardStyle}>
-  <div className={styles.cardRow}>
+    <div className={styles.cardRow}>
     <InfoCard
-      iconSrc="/dog.svg"
+      iconSrc="/pet food icon.svg"
       title="Best quality pet food"
       subtitle={
         <>
@@ -43,7 +49,7 @@ export default function Body() {
     />
 
     <InfoCard
-      iconSrc="/Beco.svg"
+      iconSrc="/Accessories icon.svg"
       title="Toys & Accessories"
       subtitle={
         <>
@@ -55,7 +61,7 @@ export default function Body() {
     />
 
     <InfoCard
-      iconSrc="/Accessories icon.svg"
+      iconSrc="/Illustration.svg"
       title="Pets medical care"
       subtitle={
         <>
@@ -67,7 +73,7 @@ export default function Body() {
     />
 
     <InfoCard
-      iconSrc="/globe.svg"
+      iconSrc="/Illustration.svg"
       title="Pets grooming"
       subtitle={
         <>
@@ -78,8 +84,31 @@ export default function Body() {
       }
     />
   </div>
-</section>
+    </section>
 
+      <UserComment/>
+
+
+
+          <section className={styles.Section}>
+          <div>
+              <h1 className={styles.h1}>Let's talk, <br />Wroof!</h1>
+              <h2 className={styles.p}>
+                You can ask us questions about your pet,<br />and we will be happy to answer you.
+              </h2>
+
+              <button className={styles.GetStarted}>
+                  Contact Us
+              </button>
+          </div>
+
+          <div className={styles.img}>
+              <img src="/dog.svg" alt="Illustration" height={360} width={475}/>
+          </div>
+        </section>
+
+      <Footer />
+  
     </>
-  )
+  );
 }

@@ -28,6 +28,10 @@
   font-weight: 100;
   cursor: pointer;
 }
+.SignUp:hoover{
+    color: #3366a9;
+    transform: scale(0.05);
+}
 
 .Login {
   background-color: #3366FF;
@@ -37,9 +41,14 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   height: 54;
-  width: 153px;
+  width: 83px;
   border-radius: 5%;
   font-weight: 100;
+}
+
+.Login:hover {
+  background-color: #3366a9;
+  transform: scale(1.05);
 }
 
 
