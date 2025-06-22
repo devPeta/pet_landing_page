@@ -12,9 +12,9 @@ const imageList = [
 export default function ImageRow() {
   return (
     <section className={styles.imageRowSection}>
-      <div className={styles.imageRow}>
+      <div className={styles.imageRow} data-aos="fade-up">
         {imageList.map((src, index) => (
-          <div key={index} className={styles.imageWrapper}>
+          <div key={index} className={styles.imageWrapper} data-aos="fade-up">
             <Image
               src={src}
               alt={`Image ${index + 1}`}

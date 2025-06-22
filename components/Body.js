@@ -8,8 +8,8 @@ import Footer from './Footer';
 export default function Body() {
   return (
     <>
-    <section className={styles.Section}>
-          <div>
+    <section className={styles.Section} >
+          <div data-aos="fade-up">
               <h1 className={styles.h1}>Pet Store <br />& Beyond.</h1>
               <h2 className={styles.p}>
                   This is a sample landing page, created with Figma and Anima. <br />No coding involved.
@@ -20,13 +20,13 @@ export default function Body() {
               </button>
           </div>
 
-          <div className={styles.img}>
+          <div className={styles.img} data-aos="fade-up">
               <img src="/Image.svg" alt="Illustration" height={360} width={475}/>
           </div>
         </section>
 
         <section className={styles.vid}>
-              <div className={styles.vimg}>
+              <div className={styles.vimg} data-aos="fade-up">
                   <img src="/Mask group.svg" />
               </div>
         </section>
@@ -35,7 +35,7 @@ export default function Body() {
     <ImageRow/>
 
    <section className={styles.infoCardStyle}>
-    <div className={styles.cardRow}>
+    <div className={styles.cardRow} data-aos="fade-up">
     <InfoCard
       iconSrc="/pet food icon.svg"
       title="Best quality pet food"
@@ -91,7 +91,7 @@ export default function Body() {
 
 
           <section className={styles.Section}>
-          <div>
+          <div data-aos="fade-up">
               <h1 className={styles.h1}>Let's talk, <br />Wroof!</h1>
               <h2 className={styles.p}>
                 You can ask us questions about your pet,<br />and we will be happy to answer you.
@@ -102,7 +102,7 @@ export default function Body() {
               </button>
           </div>
 
-          <div className={styles.img}>
+          <div className={styles.img} data-aos="fade-up">
               <img src="/dog.svg" alt="Illustration" height={360} width={475}/>
           </div>
         </section>

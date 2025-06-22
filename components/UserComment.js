@@ -3,8 +3,8 @@ import styles from '../styles/Usercomment.module.css';
 export default function UserComment() {
   return (
     <section className={styles.container}>
-      <div className={styles.commentBox}>
-        <div className={styles.oval}>
+      <div className={styles.commentBox} data-aos="fade-up">
+        <div className={styles.oval} data-aos="fade-up">
           <img src="/user.png" alt="User Illustration" />
         </div>
 
